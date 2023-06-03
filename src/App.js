@@ -9,7 +9,8 @@ const siteTitle = process.env.REACT_APP_SITE_TITLE ?? "CYF Weather";
 function App() {
   return (
     <div className="App">
-      <Header title={siteTitle} />
+      <h1>Inna's app</h1>
+      <Header title={siteTitle}/>
       <main className="c-site-main" tabIndex="0">
       <Icon name="clear"/>
     
