@@ -1,2 +1,161 @@
 @use "theme/utilities.scss";
 @use "theme/global.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-color: rgb(156, 206, 244);
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120vh;
+}
+
+.header {
+  background-color: rgb(117, 158, 218);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.header .city-name {
+margin-right: 200px;
+}
+
+.header .city-name h1 {
+  font-size: 22px;
+  color: white;
+  margin: 10px;
+  font-weight: 100;
+}
+
+.header .button .find-button {
+  background-color: rgb(88, 121, 199);
+  border: none;
+  color: black;
+  font-size: 14px;
+  font-weight:100;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  border-radius: 3%;
+//   cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+//   flex-grow: 1;
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+    margin-top: 30px;
+
+}
+.weather-icon img {
+  width: 160px;
+  height: 160px;
+}
+
+.weather-name p {
+  margin: 10px 0;
+  color: #e1e9f0;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temp {
+  font-size: 16px;
+  margin: 0;
+}
+
+.degree {
+  font-size: 20px;
+  margin: 15px 0 15px 15px;
+}
+
+.extra-info {
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+}
+
+.humidity, .pressure {
+    display: flex;
+    flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.humid p {
+font-size: 20px;
+    font-weight: bold;
+      margin: 15px 15px 15px 0;
+}
+
+.pres p {
+   font-size: 20px;
+    font-weight: bold;
+  margin: 15px; 
+}
+
+.forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.weather-icon-forecast {
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+}
+
+.time {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.temperature {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+
+
+
+
