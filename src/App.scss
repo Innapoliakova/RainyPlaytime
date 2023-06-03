@@ -15,8 +15,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 120vh;
+  height: auto;
 }
+
+/* Search */
 
 .header {
   background-color: rgb(117, 158, 218);
@@ -47,15 +49,15 @@ margin-right: 200px;
   padding: 20px 25px;
   text-transform: uppercase;
   border-radius: 3%;
-//   cursor: pointer;
 }
+
+/* The weather now */
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-//   flex-grow: 1;
 }
 
 .current-weather {
@@ -125,6 +127,11 @@ font-size: 20px;
   margin: 15px; 
 }
 
+/* The weather over next 24 hours */
+
+.app {
+    height: auto;
+}
 .forecast {
   display: flex;
   flex-wrap: wrap;
@@ -135,7 +142,7 @@ font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
 }
 
 .weather-icon-forecast {
@@ -154,6 +161,31 @@ font-size: 20px;
   margin: 0;
 }
 
+/* Media Queries */
+
+@media screen and (max-width: 510px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header .city-name {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+
+  .forecast {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forecast-item {
+    margin: 10px 0;
+  }
+}
 
 
 
