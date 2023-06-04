@@ -1,21 +1,20 @@
 
 
 import React from "react";
-// import cloudy from "../../img/weather-icons/mostlycloudy.svg";
 import rain from "../../img/weather-icons/rain.svg";
 
-const CurrentWeather = () => {
+const CurrentWeather = ({data}) => {
   return (
     <div className="current-weather">
       <div className="weather-icon">
         <img src={rain} alt="weather icon" />
       </div>
       <div className="weather-name">
-        <p>Rain</p>
+        <p>{data.weatherName}</p>
       </div>
       <div className="temperature">
         <div className="temp">
-          <h3>Temperature</h3>
+          <h3>{data.temperature}</h3>
         </div>
         <div className="degree">
           <p>22° to 23°C</p>
@@ -24,7 +23,7 @@ const CurrentWeather = () => {
       <div className="extra-info">
         <div className="humidity">
           <div className="humid">
-            <p>Humidity</p>
+            <p>{data.humidity}</p>
           </div>
           <div className="humid-now">
             <p>65%</p>
@@ -32,7 +31,7 @@ const CurrentWeather = () => {
         </div>
         <div className="pressure">
           <div className="pres">
-            <p>Pressure</p>
+            <p>{data.pressure}</p>
           </div>
           <div className="pres-now">
             <p>1076</p>
