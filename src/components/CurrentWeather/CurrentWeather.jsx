@@ -5,6 +5,7 @@ import React from "react";
 import Icon from "../Icon/Icon.jsx";
 
 const CurrentWeather = ({data}) => {
+  
   return (
     <div className="current-weather">
       <div className="weather-icon">
@@ -21,7 +22,9 @@ const CurrentWeather = ({data}) => {
         <div className="degree">
           <p>
             <span>
-              {data.temperature_min} to {data.temperature_max}
+              {Math.round(data.temperature_min)} to{" "}
+              {Math.round(data.temperature_max)}°C 
+              {/* // Fahrenheit to Celsius - ? */}
             </span>
           </p>
         </div>
