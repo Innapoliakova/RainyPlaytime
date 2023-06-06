@@ -134,7 +134,7 @@ font-size: 20px;
 }
 .forecast {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 
@@ -144,6 +144,7 @@ font-size: 20px;
   align-items: center;
   margin: 10px 10px 20px 10px;
 }
+
 
 .weather-icon-forecast {
     width: 70px;
