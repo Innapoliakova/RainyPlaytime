@@ -1,51 +1,68 @@
+// import React from "react";
+// import Icon from "../Icon/Icon.jsx";
+
+// const CurrentWeather = ({ data }) => {
+//   const weather = data.weather[0];
+
+//   return (
+//     <div className="current-weather">
+//       <div className="current-weather__icon">
+//         <Icon icon={weather.icon} />
+//       </div>
+//       <div className="current-weather__info">
+//         <h2 className="current-weather__name">{weather.description}</h2>
+//         <p className="current-weather__temperature">
+//           Temperature: {Math.round(data.main.temp)}°C
+//         </p>
+//         <p className="current-weather__humidity">
+//           Humidity: {data.main.humidity}%
+//         </p>
+//         <p className="current-weather__pressure">
+//           Pressure: {data.main.pressure} hPa
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CurrentWeather;
+
+import React, { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Icon from "./components/Icon/Icon";
-
 import Search from "./components/Search/Search";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import NextWeather from "./components/NextWeather/NextWeather";
-import FakeWeatherData from "./data/FakeWeather.json"; 
-
-
-//configs
-const siteTitle = process.env.REACT_APP_SITE_TITLE ?? "CYF Weather";
 
 function App() {
+  const [weatherData, setWeatherData] = useState(null);
 
-// const weatherData = {
-//   weatherName: "Rain",
-//   temperature_min: "22°",
-//   temperature_max: "23°C",
-//   humidity: "65%",
-//   pressure: "1076",
-// };
+  const fetchWeatherData = async (cityName) => {
+    const API_KEY = "3159defa1fc8f95a0c1fa07247572cce";
 
-const weatherData = {
-  weatherIcon: FakeWeatherData.list[0].weather[0].icon,
-  weatherName: FakeWeatherData.list[0].weather[0].description,
-  temperature_min: FakeWeatherData.list[0].main.temp_min,
-  temperature_max: FakeWeatherData.list[0].main.temp_max,
-  humidity: FakeWeatherData.list[0].main.humidity,
-  pressure: FakeWeatherData.list[0].main.pressure,
-};
+    try {
+      const response = await fetch(
+        `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&cnt=8&units=metric&appid=${API_KEY}`
+      );
+      const data = await response.json();
+      setWeatherData(data);
+    } catch (error) {
+      console.log("Error fetching weather data: ", error);
+    }
+  };
 
   return (
     <div className="app">
-      <Search />
+      <Search onSearch={fetchWeatherData} />
       <div className="content">
-        <CurrentWeather data={weatherData} />
-        <NextWeather />
+        {weatherData && <CurrentWeather data={weatherData.list[0]} />}
+        {weatherData && <NextWeather weatherData={weatherData} />}
       </div>
-
-      {/* <Header title={siteTitle}/>
-      <main className="c-site-main" tabIndex="0">
-      <Icon name="clear"/>
-      </main>
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default App; 
