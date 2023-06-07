@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6714a80c.css",
+    "main.js": "/static/js/main.2a70a3db.js",
+    "static/js/787.d2b54161.chunk.js": "/static/js/787.d2b54161.chunk.js",
+    "static/media/partlycloudy.svg": "/static/media/partlycloudy.2fbfa7511e2d71505193c6772fe1492e.svg",
+    "static/media/mostlycloudy.svg": "/static/media/mostlycloudy.f9d38b756fee8e081a028a552769cba4.svg",
+    "static/media/drizzle.svg": "/static/media/drizzle.35f31a8ed33da3618abe1e9217dd1725.svg",
+    "static/media/storm.svg": "/static/media/storm.a0bbf9d10f2424e9fced6b55b760c239.svg",
+    "static/media/snow.svg": "/static/media/snow.34a1b4b0dd73fb872556d60b8028a28e.svg",
+    "static/media/unknown.svg": "/static/media/unknown.f69bb01d3daa2620f31c962f8f42b1f9.svg",
+    "static/media/clear.svg": "/static/media/clear.322c6cac4355d1d9c52a974018527263.svg",
+    "static/media/rain.svg": "/static/media/rain.0b9d593c8f5ae6cc42ab0f4845ce25aa.svg",
+    "index.html": "/index.html",
+    "static/media/fog.svg": "/static/media/fog.916e135b1ed83b09fff1e2cabfc0c92c.svg",
+    "static/media/cloudy.svg": "/static/media/cloudy.c2af3ac85fa86c8580886fc3d8cbefe7.svg",
+    "main.6714a80c.css.map": "/static/css/main.6714a80c.css.map",
+    "main.2a70a3db.js.map": "/static/js/main.2a70a3db.js.map",
+    "787.d2b54161.chunk.js.map": "/static/js/787.d2b54161.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6714a80c.css",
+    "static/js/main.2a70a3db.js"
+  ]
+}

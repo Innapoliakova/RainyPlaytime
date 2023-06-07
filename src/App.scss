@@ -2,8 +2,11 @@
 @use "theme/global.scss";
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
+html {
+   background-color: rgb(117, 158, 218);
+}
 body {
+  background-color: rgb(117, 158, 218);
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
@@ -29,8 +32,18 @@ body {
   flex-direction: row;
 }
 
+input {
+  background-color: rgb(117, 158, 218);
+  color: #e1e9f0;
+  width: auto;
+  height: 30px;
+  border: none;
+  font-size: 20px;
+
+}
+
 .header .city-name {
-margin-right: 200px;
+margin-right: 170px;
 }
 
 .header .city-name h1 {
@@ -43,8 +56,9 @@ margin-right: 200px;
 .header .button .find-button {
   background-color: rgb(88, 121, 199);
   border: none;
+  width: 210px;
   color: black;
-  font-size: 14px;
+  font-size: 17px;
   font-weight:100;
   padding: 20px 25px;
   text-transform: uppercase;
@@ -60,7 +74,7 @@ margin-right: 200px;
   justify-content: center;
 }
 
-.current-weather {
+.current-weather__info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +90,7 @@ margin-right: 200px;
   height: 160px;
 }
 
-.weather-name p {
+.current-weather__name {
   margin: 10px 0;
   color: #e1e9f0;
 }
@@ -88,13 +102,14 @@ margin-right: 200px;
   align-items: center;
 }
 
-.temp {
-  font-size: 16px;
+.current-weather__temperature p {
+  font-size: 24px;
+   font-weight: bold;
   margin: 0;
 }
 
 .degree {
-  font-size: 20px;
+  font-size: 18px;
   margin: 15px 0 15px 15px;
 }
 
@@ -112,16 +127,17 @@ margin-right: 200px;
     flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+  margin-right: 20px; 
 }
 
-.humid p {
+.current-weather__humidity p {
 font-size: 20px;
     font-weight: bold;
       margin: 15px 15px 15px 0;
+      
 }
 
-.pres p {
+.current-weather__pressure p {
    font-size: 20px;
     font-weight: bold;
   margin: 15px; 
@@ -134,7 +150,7 @@ font-size: 20px;
 }
 .forecast {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -152,14 +168,8 @@ font-size: 20px;
     margin: 30px;
 }
 
-.time {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.temperature {
-  font-size: 16px;
-  margin: 0;
+.forecast .forecast-item p {
+  font-size: large;
 }
 
 /* Media Queries */
