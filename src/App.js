@@ -1,9 +1,8 @@
 
 import React, { useState } from "react";
 import "./App.scss";
-import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Icon from "./components/Icon/Icon";
+
 import Search from "./components/Search/Search";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import NextWeather from "./components/NextWeather/NextWeather";
